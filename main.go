@@ -1,8 +1,6 @@
 package main
 
-import (
-	"GinSample/v4GetParam"
-)
+import "GinSample/v7middleware"
 
 func main() {
 
@@ -14,8 +12,9 @@ func main() {
 	// r3 := v3JsonResp.SetupRouter()
 	// r3.Run(":8080")
 
-	r4 := v4GetParam.SetupRouter()
+	// r4 := v4GetParam.SetupRouter()
 
-	r4.Run()
+	r5 := v7middleware.UseHookForSomeRouter()
 
+	r5.Run(":8080")
 }
