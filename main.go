@@ -1,6 +1,6 @@
 package main
 
-import "GinSample/v7middleware"
+import "GinSample/v5dataBind"
 
 func main() {
 
@@ -14,7 +14,10 @@ func main() {
 
 	// r4 := v4GetParam.SetupRouter()
 
-	r5 := v7middleware.UseHookForSomeRouter()
+	// r7 := v7middleware.UseHookForSomeRouter()
+	// r7.Run(":8080")
+
+	r5 := v5dataBind.Bind()
 
 	r5.Run(":8080")
 }

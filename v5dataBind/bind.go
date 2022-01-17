@@ -62,7 +62,7 @@ func Bind() *gin.Engine {
 	})
 
 	// 绑定QueryString示例 (/loginQuery?user=q1mi&password=123456)
-	router.GET("/loginForm", func(c *gin.Context) {
+	router.GET("/loginQuery", func(c *gin.Context) {
 		var login Login
 		// ShouldBind()会根据请求的Content-Type自行选择绑定器
 		if err := c.ShouldBind(&login); err == nil {
